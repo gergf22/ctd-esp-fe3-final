@@ -19,7 +19,7 @@ const Card = ({ dentist }) => {
           <CardMedia
             component="img"
             height="150"
-            image="../../public/images/doctor.jpg"
+            image="/images/doctor.jpg"
             alt="Imagen doctor generica"
           />
           <CardContent>

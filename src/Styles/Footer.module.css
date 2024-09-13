@@ -1,0 +1,12 @@
+.footerConteiner{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerImg {
+    height: fit-content;
+    width: 50%;
+}

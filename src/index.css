@@ -42,12 +42,11 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
   margin-top: 2rem;
 }

@@ -8,7 +8,7 @@ import Layout from "./Layouts/Layout";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark">
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route path={routes.home} element={<Home />} />
