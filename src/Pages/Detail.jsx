@@ -1,3 +1,4 @@
+import { Box, CircularProgress } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -23,22 +24,26 @@ const Detail = () => {
   }, []);
 
   return (
-    <>
-      <h1>Detail Dentist id </h1>
+    <div className="card-grid">
+      
       {loading ? (
-        <h2>aca va el spinner...</h2>
+          <div>
+            <CircularProgress />
+          </div>
       ) : (
         <div>
+          
           {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
           {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+          <h1> Detail Dentist {dentist.id} </h1>
           <h2>{dentist.name}</h2>
           <h3>📧: {dentist.email}</h3>
           <h3>📞: {dentist.phone}</h3>
           <h3>🌐: {dentist.website}</h3>
         </div>
       )}
-      ;
-    </>
+      
+    </div>
   );
 };
 
