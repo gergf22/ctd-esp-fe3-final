@@ -5,7 +5,7 @@ import { reducer } from "../../Reducers/reducer";
 const ContextGlobal = createContext();
 
 const lsFavs = JSON.parse(localStorage.getItem("favs")) || [];
-const initialState = { theme: "", dentists: [], favs: lsFavs, loading: true };
+const initialState = { theme: false, dentists: [], favs: lsFavs, loading: true };
 
 const Context = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo

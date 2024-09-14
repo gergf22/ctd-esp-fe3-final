@@ -23,3 +23,8 @@
     margin: 0 auto;
     align-items: center;
 }
+
+.dark{
+    background-color: black;
+    color: beige;
+}

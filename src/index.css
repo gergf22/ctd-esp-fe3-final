@@ -115,7 +115,13 @@ tr:nth-child(even) {
 .dark{
   background-color: #12121296;
   color: white;
+  margin-top: 0%;
+  padding-bottom: 32px;
 }
 .dark > a {
   color: white;
+}
+
+.dark > h1 {
+  margin-top: 0%;
 }

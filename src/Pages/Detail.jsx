@@ -1,7 +1,8 @@
-import { Box, CircularProgress, List, ListItemText } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useContexGlobal } from "../Components/utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -10,6 +11,7 @@ const Detail = () => {
   const url = "https://jsonplaceholder.typicode.com/users/" + id;
   const [dentist, setDentist] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {state} = useContexGlobal()
 
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   useEffect(() => {
@@ -24,7 +26,7 @@ const Detail = () => {
   }, []);
 
   return (
-    <>
+    <div className={state.theme? "dark" : ""}>
       <h1> Detail Dentist {id} </h1>
       <div className="card-grid">
         {loading ? (
@@ -46,7 +48,7 @@ const Detail = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

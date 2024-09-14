@@ -11,6 +11,8 @@ export const reducer = (state, action) => {
         return { ...state, favs: filteredFavs };
       case "LOADING":
         return { ...state, loading: action.payload };
+      case "TOGGLE_THEME":
+        return {...state, theme: action.payload}
       default:
         throw new Error("Acción no existente");
     }

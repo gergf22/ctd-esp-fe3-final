@@ -6,9 +6,10 @@ import Detail from "./Pages/Detail";
 import { routes } from "./Components/utils/routes";
 import Layout from "./Layouts/Layout";
 
+
 function App() {
   return (
-    <div className="App dark">
+    <div className="App">
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route path={routes.home} element={<Home />} />

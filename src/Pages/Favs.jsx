@@ -8,7 +8,7 @@ const Favs = () => {
   const {state} = useContexGlobal()
 
   return (
-    <>
+    <div className={state.theme? "dark" : ""}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
@@ -17,7 +17,7 @@ const Favs = () => {
           <Card key={fav.id} dentist={fav}/>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

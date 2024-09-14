@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import FormStyles from "../Styles/Contact.module.css";
 import { TextField } from "@mui/material";
 
-const Form = () => {
+
+const Form = ({theme}) => {
   //Aqui deberan implementar el form completo con sus validaciones
 
   const [contacto, setContacto] = useState({ nombre: "", email: "" });
@@ -35,7 +36,10 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit} className={FormStyles.formConteiner}>
         <TextField
+
           id="outlined-controlled"
+          variant={theme? "filled": "outlined" }
+          color={theme? "ligh" : "primary" }
           label="Nombre completo:"
           value={contacto.nombre}
           onChange={handleChangeName}
@@ -43,13 +47,16 @@ const Form = () => {
 
         <TextField
           type="email"
-          id="outlined-controlled"
+          /* id="outlined-controlled" */
+          id="filled-controlled"
+          variant={theme? "filled": "outlined" }
+          color={theme? "ligh" : "primary" }
           label="Email de contacto"
           value={contacto.email}
           onChange={handleChangeEmail}
         />
 
-        <button className="favButton">Contactenme</button>
+        <button className={theme? "favButton " + FormStyles.dark : "favButton " }>Contactenme</button>
       </form>
       {show ? (
         <h3>
