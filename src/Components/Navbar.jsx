@@ -28,7 +28,7 @@ const navItems = [
   { id: 3, name: "CONTACTO", route: routes.contact },
 ];
 
-function NavBar(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -132,4 +132,4 @@ function NavBar(props) {
   );
 }
 
-export default NavBar;
+export default Navbar;
