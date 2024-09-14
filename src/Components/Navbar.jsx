@@ -9,6 +9,7 @@ import {
   IconButton,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   Toolbar,
   Typography,
@@ -56,7 +57,9 @@ function Navbar(props) {
           </ListItem>
         ))}
         <ListItem>
-          <button>Change theme</button>
+          <ListItemButton sx={{ color: "#000" }} onClick={handleTheme}>
+            {state.theme ? <LightModeIcon /> : <DarkModeIcon />}
+          </ListItemButton>
         </ListItem>
       </List>
     </Box>
@@ -115,7 +118,7 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
